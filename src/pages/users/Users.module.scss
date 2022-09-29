@@ -1,0 +1,9 @@
+@import '../../styles/variables.scss';
+
+.users {
+  min-height: 77.5vh;
+
+  @include breakpoint(md) {
+    min-height: 87.5vh;
+  }
+}
