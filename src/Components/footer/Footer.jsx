@@ -26,15 +26,24 @@ export default function Footer() {
             className={classes.footer__content__socialMedia__twitter}
           ></img>
         </div>
-
-        <ul>
+        <div className={classes.footer__content__list}>
+          <ul>
+            <li>
+              <Link to="/">Politica de tratamiento de datos</Link>
+            </li>
+            <li>
+              <Link to="/">Terminos y condiciones</Link>
+            </li>
+          </ul>
+        </div>
+        {/* <ul>
           <li>
             <Link to="/">Politica de tratamiento de datos</Link>
           </li>
           <li>
             <Link to="/">Terminos y condiciones</Link>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </footer>
   );

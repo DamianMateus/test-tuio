@@ -6,6 +6,8 @@
   height: 100%;
   padding: 0 1.5rem;
   margin-top: auto;
+  justify-content: center;
+  align-items: center;
 
   @include breakpoint(md) {
     padding: 0 3rem;
@@ -23,21 +25,26 @@
     justify-content: space-between;
     position: relative;
 
+    @include breakpoint(md) {
+      flex-direction: row;
+      min-height: 10rem;
+    }
+
     &__logo {
       position: relative;
       margin-top: 2rem;
       margin-bottom: 1rem;
       cursor: pointer;
-
       @include breakpoint(md) {
-        margin-right: 70%;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
       }
     }
 
     &__socialMedia {
       margin-bottom: 1rem;
       @include breakpoint(md) {
-        margin-left: 70%;
+        margin-bottom: 0;
       }
 
       &__facebook {
@@ -47,6 +54,16 @@
       &__twitter {
         margin-left: 1rem;
       }
+    }
+
+    &__list {
+      justify-content: center;
+      align-items: center;
+      @include breakpoint(md) {
+        margin-right: 40%;
+        margin-top: 7rem;
+      }
+      
     }
 
     ul {
@@ -61,8 +78,13 @@
 
       li {
         margin-bottom: 1rem;
-        justify-content: center;
+        
+        @include breakpoint(md) {
+          margin-top: -4rem;
+        }
+
         &:not(:last-child) {
+          margin-bottom: $spacing-lg;
           
           @include breakpoint(md) {
             margin-right: $spacing-md;
