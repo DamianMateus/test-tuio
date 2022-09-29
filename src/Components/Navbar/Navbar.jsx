@@ -44,7 +44,7 @@ const Header = () => {
 
   return (
     <header className={classes.header}>
-      <div className={classes.header__content}>        
+      <div className={classes.header__content}>
         <div className={classes.header__content__toggle}>
           {!menuOpen ? (
             <AiOutlineMenu onClick={menuToggleHandler} />

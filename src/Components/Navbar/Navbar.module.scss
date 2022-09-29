@@ -27,10 +27,9 @@
     &__logo {
       position: relative;
       margin-right: 50%;
-    cursor: pointer;
-      @include breakpoint(md) {
-        
-      }
+      cursor: pointer;
+
+      @include breakpoint(md) {}
     }
 
     &__nav {
