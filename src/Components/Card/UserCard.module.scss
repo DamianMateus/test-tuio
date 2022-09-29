@@ -1,0 +1,49 @@
+@import './../../styles/variables.scss';
+
+.card {
+  max-width: 50%;
+  margin-left: 15%;
+  margin-bottom: 2rem;
+  align-items: center;
+  padding: 1rem;
+
+  @include breakpoint(md) {
+    max-width: 50%;
+    margin: 2rem;
+    padding: 1rem;
+    align-items: center;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+  }
+
+  &__name {
+
+    @include breakpoint(md) {}
+  }
+
+  &__button {
+    border: none;
+    background-color: $action;
+    color: $light;
+    min-width: 125%;
+    height: 3rem;
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+
+    @include breakpoint(md) {
+      border: none;
+      background-color: $action;
+      color: $light;
+      min-width: 125%;
+      height: 3rem;
+      margin-top: 1rem;
+      margin-bottom: -1rem;
+      margin-left: -1rem;
+      margin-right: -1rem;
+    }
+  }
+}
