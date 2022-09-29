@@ -1,9 +1,75 @@
 @import '../../styles/variables.scss';
 
 .users {
-  min-height: 77.5vh;
+  min-height: 67.5vh;
+  margin-left: 10%;
+  margin-top: 4%;
 
   @include breakpoint(md) {
-    min-height: 87.5vh;
+    min-height: 72.5vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+  }
+
+  transition: 0.3s ease all;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    &__inputGroup {
+      display: flex;
+      flex-direction: row;
+      border-color: none;
+      height: 3rem;
+      width: 20rem;
+      padding: 5px;
+
+      & svg {
+        margin-left: -1.5rem;
+        margin-top: -0.3rem;
+        height: 3rem;
+        fill:$action;
+        @include breakpoint(md){
+          margin-left: -1.5rem;
+          margin-top: -0.3rem;
+          height: 3rem;
+          fill:$action;
+        }
+      }
+    }
   }
 }
+
+// .users {
+//   min-height: 67.5vh;
+
+//   @include breakpoint(md) {
+//     min-height: 72.5vh;
+//   }
+
+//   &__content {
+
+//     @include breakpoint(md) {
+//       max-width: 80%;
+//       margin-left: 10%;
+//       margin-right: 10%;
+//       display: flex;
+//       flex-direction: column;
+//     } 
+//     &__search {
+//       @include breakpoint(md) {
+
+//       }
+//       &__i{
+//         background-color: red;
+//       }
+//     }
+//     &__cards {
+//       display: flex;
+//       flex-direction: row;
+//     }
+//   }
+// }
