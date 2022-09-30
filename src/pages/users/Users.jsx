@@ -10,7 +10,8 @@ import { BsSearch } from "react-icons/bs";
 
 const Users = () => {
   const [user, setUser] = useState([]);
-  const [searchTerm, setSearchTerm] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [term, setTerm] = useState("");
 
   useEffect(() => {
     Axios.get("https://reqres.in/api/users").then((response) => {
@@ -18,9 +19,15 @@ const Users = () => {
     });
   }, []);
 
-  const renderList = user.map((value, index) => {
+  const results = !searchTerm ? user : user.filter((data) => data.first_name.toLowerCase().includes(searchTerm.toLocaleLowerCase()))
+
+  const renderList = results.map((value, index) => {
     return <UserCard value={value} key={index} />;
   });
+
+  const changeHandler = (e) => {
+    setSearchTerm(e.target.value)
+  }
 
   return (
     <>
@@ -31,6 +38,8 @@ const Users = () => {
               className="form-control"
               type="text"
               placeholder="Buscar por nombre"
+              value={searchTerm}
+              onChange={changeHandler}
             />
             <BsSearch />
           </div>
